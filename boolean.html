@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eloquent JavaScript</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Bulma Version 0.8.x-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" width="112" height="35">
+          </a>
+      
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href = "file:///C:/Users/kwier/Desktop/studia/Semestr%20IV/JS/Nowy%20folder/index.html" >
+              Home
+            </a>
+      
+            <a class="navbar-item" href="https://eloquentjavascript.net/Eloquent_JavaScript.pdf">
+              Download in PDF
+            </a>
+      
+          </div>
+        </div>
+      </nav>
+      <section class="hero is-small is-dark is-bold">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+                Boolean values & logical operations
+            </h1>
+            <blockquote>
+                “Below the surface of the machine, the program moves. Without
+                effort, it expands and contracts. <br>
+                 In great harmony, electrons scatter
+                 and regroup. The forms on the monitor are but ripples on the water.<br>
+                 The essence stays invisibly below.”
+                 - Master Yuan-Ma, The Book of Programming
+            </blockquote>
+          </div>
+        </div>
+      </section>
+      <section class = "section">
+          <div class = "container">
+              <div class = "tile is-ancestor">
+                  <div class = "tile is-child box">
+                      <h1 class = "title is-8">Boolean</h1>
+                      <p>
+                        It is often useful to have a value that distinguishes between only two possibilities, like “yes” and “no” or “on” and “off”. For this purpose, JavaScript has a
+                        Boolean type, which has just two values, true and false, which are written as
+                        those words.<br><br>
+                        <h2 class = "title is-4">Comparison</h2>
+                        Here is one way to produce Boolean values:<br>
+                        <strong>
+                            console.log(3 > 2)
+                            // → true
+                            console.log(3 < 2)
+                            // → false
+                        </strong> <br>
+                        The > and < signs are the traditional symbols for “is greater than” and “is
+less than”, respectively. They are binary operators. Applying them results in
+a Boolean value that indicates whether they hold true in this case.
+Strings can be compared in the same way.
+The way strings are ordered is roughly alphabetic but not really what you’d
+expect to see in a dictionary: uppercase letters are always “less” than lowercase
+ones, so "Z" < "a", and nonalphabetic characters (!, -, and so on) are also
+included in the ordering. When comparing strings, JavaScript goes over the
+characters from left to right, comparing the Unicode codes one by one.
+Other similar operators are >= (greater than or equal to), <= (less than or
+equal to), == (equal to), and != (not equal to).<br>
+There is only one value in JavaScript that is not equal to itself, and that is
+NaN (“not a number”). NaN is supposed to denote the result of a nonsensical computation, and as
+such, it isn’t equal to the result of any other nonsensical computations.
+
+                      </p>
+                  </div>
+                  <div class = "tile is-child box">
+                      <h1 class = "title is-8">Logical operations</h1>
+                      <p>
+                        There are also some operations that can be applied to Boolean values themselves. JavaScript supports three logical operators: and, or, and not. These
+                        can be used to “reason” about Booleans.
+                        The && operator represents logical and. It is a binary operator, and its result
+                        is true only if both the values given to it are true.
+                        The || operator denotes logical or. It produces true if either of the values
+given to it is true. Not is written as an exclamation mark (!). It is a unary operator that flips
+the value given to it—!true produces false, and !false gives true.
+When mixing these Boolean operators with arithmetic and other operators,
+it is not always obvious when parentheses are needed. In practice, you can
+usually get by with knowing that of the operators we have seen so far, || has
+the lowest precedence, then comes &&, then the comparison operators (>, ==,
+and so on), and then the rest. The last logical operator I will discuss is not unary, not binary, but ternary,
+operating on three values. It is written with a question mark and a colon, like
+this: <strong>console.log(true ? 1 : 2);
+    // → 1
+    console.log(false ? 1 : 2);
+    // → 2
+    </strong> This one is called the conditional operator (or sometimes just the ternary
+    operator since it is the only such operator in the language). The value on the
+    left of the question mark “picks” which of the other two values will come out.
+    When it is true, it chooses the middle value, and when it is false, it chooses the
+    value on the right.    
+                      </p>
+                      <table class = "table">
+                          <thead>
+                              <tr>
+                                <th>Operator</th>
+                                <th>Represents</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>&&</td>
+                                  <td>and</td>
+                              </tr>
+                              <tr>
+                                <td>||</td>
+                                <td>or</td>
+                            </tr>
+                            <tr>
+                                <td>!</td>
+                                <td>not</td>
+                            </tr>
+                          </tbody>
+                      </table> 
+                  </div>
+              </div>
+          </div>
+      </section>
+      <div class="buttons has-addons is-centered">
+        <a class="button is-danger is-medium" href="file:///C:/Users/kwier/Desktop/studia/Semestr%20IV/JS/Nowy%20folder/strings.html">
+            <span class="icon is-small">
+                <i class="fas fa-angle-left"></i>
+              </span></a>
+        </button>
+        <a class="button is-black is-medium" href="file:///C:/Users/kwier/Desktop/studia/Semestr%20IV/JS/Nowy%20folder/index.html">
+            <span class="icon is-small ">
+                <i class="fas fa-home"></i>
+              </span>
+            </a>
+      </div>
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Bulma</strong> by <a href="https://github.com/KWierchomska">Kinga Wierchomska</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          </p>
+        </div>
+      </footer>
+</body>
+</html>

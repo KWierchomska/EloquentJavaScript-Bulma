@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eloquent JavaScript</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Bulma Version 0.8.x-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" width="112" height="35">
+          </a>
+      
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href = "file:///C:/Users/kwier/Desktop/studia/Semestr%20IV/JS/Nowy%20folder/index.html" >
+              Home
+            </a>
+      
+            <a class="navbar-item" href="https://eloquentjavascript.net/Eloquent_JavaScript.pdf">
+              Download in PDF
+            </a>
+      
+          </div>
+        </div>
+      </nav>
+
+      <section class="hero is-small is-dark is-bold">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+                Values, Numbers, Arithmetics & special numbers
+            </h1>
+            <blockquote>
+                “Below the surface of the machine, the program moves. Without
+                effort, it expands and contracts. <br>
+                 In great harmony, electrons scatter
+                 and regroup. The forms on the monitor are but ripples on the water.<br>
+                 The essence stays invisibly below.”
+                 - Master Yuan-Ma, The Book of Programming
+            </blockquote>
+          </div>
+        </div>
+      </section>
+      <section class = "section">
+          <div class = "container">
+              <div class = "tile is-ancestore">
+                  <div class = "tile is-parent is-8">
+                      <div class = "tile is-child box">
+                        <h1 class = "title is-8">Values</h1>
+                        <p>Imagine a sea of bits—an ocean of them. A typical modern computer has more
+                          than 30 billion bits in its volatile data storage (working memory). Nonvolatile
+                          storage (the hard disk or equivalent) tends to have yet a few orders of magnitude
+                          more.
+                          To be able to work with such quantities of bits without getting lost, we must
+                          separate them into chunks that represent pieces of information. In a JavaScript
+                          environment, those chunks are called values. Though all values are made of bits,
+                          they play different roles. Every value has a type that determines its role. Some
+                          values are numbers, some values are pieces of text, some values are functions,
+          and so on.
+          To create a value, you must merely invoke its name. This is convenient. You
+          don’t have to gather building material for your values or pay for them. You
+          just call for one, and whoosh, you have it. They are not really created from
+          thin air, of course. Every value has to be stored somewhere, and if you want to
+          use a gigantic amount of them at the same time, you might run out of memory.
+          Fortunately, this is a problem only if you need them all simultaneously. As
+          soon as you no longer use a value, it will dissipate, leaving behind its bits to
+          be recycled as building material for the next generation of values.
+          This chapter introduces the atomic elements of JavaScript programs, that is,
+          the simple value types and the operators that can act on such values.
+                      </p>
+                      </div>
+                  </div>
+                  <div class = "tile is-parent is-4">
+                      <div class = "tile is-child box">
+                        <figure class="image is-3by4">
+                            <img src="https://images.unsplash.com/photo-1506555191898-a76bacf004ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">
+                          </figure>
+                      </div>
+                  </div>
+              </div>
+              <div clas = "tile is-ancestore">
+                  <div class = "tile is-child box">
+                    <h1 class = "title is-8">Numbers</h1>
+                    <p>Values of the number type are, unsurprisingly, numeric values. In a JavaScript
+                      program, they are written as follows: 13
+                      Use that in a program, and it will cause the bit pattern for the number 13
+          to come into existence inside the computer’s memory.
+          JavaScript uses a fixed number of bits, 64 of them, to store a single number
+          value. There are only so many patterns you can make with 64 bits, which means
+          that the number of different numbers that can be represented is limited. With
+          N decimal digits, you can represent 10N numbers. Similarly, given 64 binary
+          digits, you can represent 264 different numbers, which is about 18 quintillion
+          (an 18 with 18 zeros after it). That’s a lot.
+          Computer memory used to be much smaller, and people tended to use groups
+          of 8 or 16 bits to represent their numbers. It was easy to accidentally overflow
+          such small numbers—to end up with a number that did not fit into the given
+          number of bits. Today, even computers that fit in your pocket have plenty of
+          memory, so you are free to use 64-bit chunks, and you need to worry about
+          overflow only when dealing with truly astronomical numbers.
+          Not all whole numbers less than 18 quintillion fit in a JavaScript number,
+          though. Those bits also store negative numbers, so one bit indicates the sign of
+          the number. A bigger issue is that nonwhole numbers must also be represented.
+          To do this, some of the bits are used to store the position of the decimal point.
+          The actual maximum whole number that can be stored is more in the range of
+          9 quadrillion (15 zeros)—which is still pleasantly huge.
+          Fractional numbers are written by using a dot.
+          9.81 
+          For very big or very small numbers, you may also use scientific notation by
+          adding an e (for exponent), followed by the exponent of the number.
+          2.998e8
+          That is 2.998 × 108 = 299,800,000.
+          Calculations with whole numbers (also called integers) smaller than the
+          aforementioned 9 quadrillion are guaranteed to always be precise. Unfortunately, calculations with fractional numbers are generally not. Just as π (pi)
+          cannot be precisely expressed by a finite number of decimal digits, many numbers lose some precision when only 64 bits are available to store them. This
+          is a shame, but it causes practical problems only in specific situations. The
+          important thing is to be aware of it and treat fractional digital numbers as
+          approximations, not as precise values.
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <div class="buttons has-addons is-centered">
+        <a class="button is-danger is-medium" href="file:///C:/Users/kwier/Desktop/studia/Semestr%20IV/JS/Nowy%20folder/index.html">
+            <span class="icon is-small">
+                <i class="fas fa-angle-left"></i>
+              </span></a>
+        </button>
+        <a class="button is-success is-medium" href="file:///C:/Users/kwier/Desktop/studia/Semestr%20IV/JS/Nowy%20folder/strings.html">
+            <span class="icon is-small">
+                <i class="fas fa-angle-right"></i>
+              </span>
+            </a>
+      </div>
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Bulma</strong> by <a href="https://github.com/KWierchomska">Kinga Wierchomska</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          </p>
+        </div>
+      </footer>
+</body>
+
+</html>

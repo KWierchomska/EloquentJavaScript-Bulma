@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eloquent JavaScript</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Bulma Version 0.8.x-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" width="112" height="35">
+          </a>
+      
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" >
+              Home
+            </a>
+      
+            <a class="navbar-item" href="https://eloquentjavascript.net/Eloquent_JavaScript.pdf">
+              Download in PDF
+            </a>
+      
+          </div>
+        </div>
+      </nav>
+
+      <section class="hero is-small is-dark is-bold">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+                Values, Types, and Operators
+            </h1>
+            <blockquote>
+                “Below the surface of the machine, the program moves. Without
+                effort, it expands and contracts. <br>
+                 In great harmony, electrons scatter
+                 and regroup. The forms on the monitor are but ripples on the water.<br>
+                 The essence stays invisibly below.”
+                 - Master Yuan-Ma, The Book of Programming
+            </blockquote>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <h1 class="title">Introduction</h1>
+          <p>
+            Inside the computer’s world, there is only data. You can read data, modify
+            data, create new data—but that which isn’t data cannot be mentioned. All
+            this data is stored as long sequences of bits and is thus fundamentally alike.
+            Bits are any kind of two-valued things, usually described as zeros and ones.
+            Inside the computer, they take forms such as a high or low electrical charge,
+            a strong or weak signal, or a shiny or dull spot on the surface of a CD. Any
+            piece of discrete information can be reduced to a sequence of zeros and ones
+            and thus represented in bits.
+            For example, we can express the number 13 in bits. It works the same way
+            as a decimal number, but instead of 10 different digits, you have only 2, and
+            the weight of each increases by a factor of 2 from right to left. Here are the
+            bits that make up the number 13, with the weights of the digits shown below
+            them:
+          </p>
+          <table class = "table is-bordered">
+              <tr>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>1</td>
+              </tr>
+              <tr>
+                <td>128</td>
+                <td>64</td>
+                <td>32</td>
+                <td>16</td>
+                <td>8</td>
+                <td>4</td>
+                <td>2</td>
+                <td>1</td>
+              </tr>
+          </table>
+          So that’s the binary number 00001101. Its non-zero digits stand for 8, 4, and
+1, and add up to 13.
+
+        </div>
+      </section>
+    <sectin class = "section">
+        <div class = "container">
+            <div class = "tile is-ancestor">
+                <div class = "tile is-parent is-4">
+                    <div class = "card is-child has-background-dark has-text-white-ter">
+                        <div class="card-image">
+                            <figure class="image">
+                              <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="Placeholder image">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="content">
+                            Learn more about JavaScript values & numbers.
+                            </div>
+                            <a class="button is-info is-fullwidth has-text-white-ter" href="file:///C:/Users/kwier/Desktop/studia/Semestr%20IV/JS/Nowy%20folder/values.html">
+                                <span class="icon is-small">
+                                    <i class="fas fa-book-open"></i>
+                                </span>
+                                <span>Read more...</span>
+                            </a>
+                          </div>
+                    </div>
+                </div>
+                <div class = "tile is-parent is-4">
+                    <div class = "card is-child has-background-dark has-text-white-ter">
+                        <div class="card-image">
+                            <figure class="image">
+                              <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="Placeholder image">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="content">
+                              Learn more about JavaScript strings - sequences of characters
+                            </div>
+                            <a class="button is-info is-fullwidth has-text-white-ter" href="file:///C:/Users/kwier/Desktop/studia/Semestr%20IV/JS/Nowy%20folder/strings.html">
+                                <span class="icon is-small">
+                                    <i class="fas fa-book-open"></i>
+                                </span>
+                                <span>Read more...</span>
+                            </a>
+                          </div>
+                    </div>
+                </div>
+                <div class = "tile is-parent is-4">
+                    <div class = "card is-child has-background-dark has-text-white-ter">
+                        <div class="card-image">
+                            <figure class="image">
+                              <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="Placeholder image">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="content">
+                              Learn more about JavaScript boolean values & logical operations.
+                            </div>
+                            <a class="button is-info is-fullwidth has-text-white-ter" href="file:///C:/Users/kwier/Desktop/studia/Semestr%20IV/JS/Nowy%20folder/boolean.html">
+                                <span class="icon is-small">
+                                    <i class="fas fa-book-open"></i>
+                                </span>
+                                <span>Read more...</span>
+                            </a>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </sectin>
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Bulma</strong> by <a href="https://github.com/KWierchomska">Kinga Wierchomska</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          </p>
+        </div>
+      </footer>
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function () {
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+
+            });
+        });
+    </script>
+</body>
+
+</html>
